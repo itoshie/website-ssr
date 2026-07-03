@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 async function getProducts() {
-  const res = await fetch("https://dummyjson.com/products", { cache: "no-store" });
+  const res = await fetch("https://dummyjson.com/products?limit=200", { cache: "no-store" });
   if (!res.ok) throw new Error("Failed to fetch products");
   return res.json();
 }
